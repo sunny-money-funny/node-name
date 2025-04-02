@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <title>범죄자 관리 시스템</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/about">About</a>
+      <a href="#">범죄 통계</a>
+      <a href="#">보안 로그</a>
+    </nav>
+    
+    <div class="police-tape">주의: 보안 시설 - 관계자 외 접근 금지</div>
+    
+    <div class="image-gallery">
+      <img src="image/1.jpg" alt="Prisoner 1" class="gallery-image" />
+      <img src="image/2.jpg" alt="Prisoner 2" class="gallery-image" />
+      <img src="image/3.jpg" alt="Prisoner 3" class="gallery-image" />
+    </div>
+    
+    <h1>범죄자 명단</h1>
+    <h1>잡아가세요!!</h1>
+
+    <div>
+      <form id="form">
+        <input type="text" id="username" placeholder="범죄자 이름을 입력하세요" required />
+        <input type="text" id="birth" placeholder="출생일 (YYYY-MM-DD)" />
+        <input type="text" id="gojail" placeholder="입소일 (YYYY-MM-DD)" />
+        <input type="text" id="outjail" placeholder="출소예정일 (YYYY-MM-DD)" />
+        <div class="form-submit">
+          <button type="submit">범죄자 등록</button>
+        </div>
+      </form>
+    </div>
+
+    <div id="list"></div>
+    
+    <div class="police-tape">경고: 데이터 변경 시 자동 기록됩니다</div>
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="./restFront.js"></script>
+  </body>
+</html>
